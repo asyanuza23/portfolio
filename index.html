@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Editorial Playground — The personal portfolio & visual archive of an independent creative director and visual artist.">
+  <title>L'ATELIER ROUGE — Editorial Playground & Creative Archive</title>
+  
+  <!-- Google Fonts: Italiana, Playfair Display (Italic), Plus Jakarta Sans, Caveat (Handwritten), Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="editorial-body">
+  <!-- Subtle Tactile Paper Grain Texture Overlay -->
+  <div class="paper-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Interactive Sticker Canvas Layer (for placed stickers) -->
+  <div id="sticker-canvas-layer" class="sticker-canvas-layer" aria-hidden="true"></div>
+
+  <!-- Editorial Top Folio & Running Masthead -->
+  <header class="editorial-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <span class="folio-tag">VOL. IV / NO. 08</span>
+        <span class="folio-divider">•</span>
+        <span class="folio-tag">PARIS & BARCELONA</span>
+        <span class="folio-divider">•</span>
+        <span class="folio-tag live-clock" id="live-clock">11:45 CET</span>
+      </div>
+
+      <div class="header-center">
+        <a href="#cover" class="masthead-logo">
+          <span class="masthead-title">L’ATELIER ROUGE</span>
+          <span class="masthead-cherry">🍒</span>
+        </a>
+      </div>
+
+      <div class="header-right">
+        <nav class="editorial-nav">
+          <a href="#catalogue" class="nav-item">Index</a>
+          <a href="#ephemera" class="nav-item">Ephemera</a>
+          <a href="#colophon" class="nav-item">Colophon</a>
+          <a href="#dispatch" class="nav-cta">
+            <span class="cta-dot"></span>
+            <span>Dispatch</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Floating Digital Scrapbook Sticker Tray -->
+  <aside class="sticker-tray-dock" id="sticker-dock" aria-label="Interactive Sticker Tray">
+    <div class="sticker-tray-header">
+      <span class="tray-title">SCRAPBOOK TRAY</span>
+      <span class="tray-hint">Click to stamp!</span>
+    </div>
+    <div class="sticker-options">
+      <button class="sticker-btn" data-sticker="cherry" title="Stamp Cherry Duo">🍒</button>
+      <button class="sticker-btn" data-sticker="bow" title="Stamp Silk Ribbon Bow">🎀</button>
+      <button class="sticker-btn" data-sticker="star" title="Stamp Red Starburst">✦</button>
+      <button class="sticker-btn" data-sticker="heart" title="Stamp Hand-drawn Heart">♡</button>
+      <button class="sticker-btn" data-sticker="stamp" title="Stamp Approved Postmark">💮</button>
+      <button class="sticker-btn" data-sticker="tape" title="Stamp Washi Masking Tape">🏷️</button>
+    </div>
+    <div class="sticker-tray-footer">
+      <button class="clear-stickers-btn" id="clear-stickers" title="Clear your placed stickers">Clear All</button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- SECTION 01: THE EDITORIAL COVER (HERO SPREAD) -->
+    <section id="cover" class="cover-section">
+      <div class="editorial-container">
+        
+        <!-- Issue Folio Bar -->
+        <div class="cover-meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">DISCIPLINE:</span>
+            <span class="meta-value">Art Direction & Visual Storytelling</span>
+          </div>
+          <div class="meta-item barcode-group">
+            <span class="editorial-barcode" aria-hidden="true">||| | |||| || | ||| |||| |</span>
+            <span class="meta-value">ISSN 2026-9481</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">STATUS:</span>
+            <span class="meta-value text-cherry">Accepting commissions for Spring/Summer</span>
+          </div>
+        </div>
+
+        <!-- Dramatic Magazine Headline -->
+        <div class="cover-headline-wrap">
+          <h1 class="cover-headline">
+            A playful playground of <span class="serif-italic text-cherry">visual romance</span>, tactile curiosities &amp; <span class="serif-italic">considered chaos</span>.
+          </h1>
+          <p class="cover-lead">
+            Curated by <strong>Valérie Vance</strong> — an independent creative director shaping brand mythologies, collectible publications, and immersive digital artifacts with quiet elegance and a punch of cherry red.
+          </p>
+        </div>
+
+        <!-- Asymmetrical Editorial Collage Spread -->
+        <div class="editorial-collage-spread">
+          <!-- Main Large Visual (Framed with Washi Tape) -->
+          <div class="collage-item main-portrait">
+            <div class="washi-tape tape-top" aria-hidden="true"></div>
+            <div class="image-frame">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Editorial portrait featuring warm natural lighting and soft shadows" 
+                   loading="eager"
+                   class="editorial-img">
+              <div class="frame-caption">
+                <span class="caption-num">FIG. 01</span>
+                <span class="caption-text">Visual Study on Monochromatics, Paris Studio</span>
+              </div>
+            </div>
+            <!-- Hand-drawn Annotation -->
+            <div class="handwritten-note note-1">
+              "capturing the space between stillness & drama" ↷
+            </div>
+          </div>
+
+          <!-- Secondary Polaroid Photo (Tilted with Pin & Stamp) -->
+          <div class="collage-item polaroid-card">
+            <div class="pushpin" aria-hidden="true"></div>
+            <div class="polaroid-inner">
+              <div class="polaroid-media">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" 
+                     alt="Minimalist architectural still life and warm terracotta ceramic form" 
+                     class="editorial-img">
+              </div>
+              <div class="polaroid-bottom">
+                <p class="handwritten-caption">morning shadows, santorini ’25</p>
+                <span class="polaroid-date">09:14 AM</span>
+              </div>
+            </div>
+            <div class="cherry-stamp-badge" aria-hidden="true">
+              <span>SPECIAL ISSUE</span>
+              <strong>04</strong>
+            </div>
+          </div>
+
+          <!-- Editorial Typography & Snippet Card -->
+          <div class="collage-item manifesto-card">
+            <div class="card-tag">CREATIVE NOTEBOOK</div>
+            <h2 class="manifesto-title">The Philosophy of the Uncalculated.</h2>
+            <p class="manifesto-quote">
+              “Beauty lives in the accidental spill of ink, the dog-eared page of a monograph, and the unapologetic confidence of a cherry red ribbon.”
+            </p>
+            <div class="card-footer-symbols">
+              <span class="symbol-cherry">🍒</span>
+              <span class="symbol-asterisk">✱</span>
+              <span class="symbol-bow">🎀</span>
+              <span class="symbol-page">P. 14</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Jump Bar -->
+        <div class="cover-scroll-indicator">
+          <a href="#catalogue" class="scroll-arrow-link">
+            <span class="scroll-label">EXPLORE THE CATALOGUE</span>
+            <span class="scroll-icon">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: THE CATALOGUE (CURATED WORKS AS MAGAZINE STORIES) -->
+    <section id="catalogue" class="catalogue-section">
+      <div class="editorial-container">
+        
+        <div class="section-title-row">
+          <div class="title-left">
+            <span class="section-badge">SELECTED REPERTOIRE</span>
+            <h2 class="section-heading">Curated Works <span class="serif-italic text-cherry">&amp; Visual Essays</span></h2>
+          </div>
+          
+          <!-- Category Filter Bar (Magazine Index Style) -->
+          <div class="magazine-index-filter" role="tablist">
+            <button class="filter-tab active" data-filter="all">All Folios [06]</button>
+            <button class="filter-tab" data-filter="brand">Identity &amp; Mythos</button>
+            <button class="filter-tab" data-filter="print">Print &amp; Monograph</button>
+            <button class="filter-tab" data-filter="object">Tactile Objects</button>
+            <button class="filter-tab" data-filter="space">Spatial &amp; Set</button>
+          </div>
+        </div>
+
+        <!-- Asymmetrical Magazine Grid (Editorial Layout) -->
+        <div class="editorial-works-grid" id="works-grid">
+          
+          <!-- Story 01: Maison de Verre (Large Vertical Spread) -->
+          <article class="work-spread spread-tall" data-category="brand" data-id="maison-de-verre">
+            <div class="washi-tape tape-angle-left" aria-hidden="true"></div>
+            <div class="spread-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Minimalist luxury cosmetic packaging and art direction" 
+                   class="spread-img">
+              <span class="spread-folio">FOLIO NO. 01 // IDENTITY</span>
+              <span class="spread-tag-pill">Case Study</span>
+            </div>
+            <div class="spread-content">
+              <div class="spread-meta-line">
+                <span class="meta-year">2026</span>
+                <span class="meta-client">Maison de Verre, Paris</span>
+              </div>
+              <h3 class="spread-title">
+                <span>Botanical Ephemera &amp; Sensory Identity</span>
+                <span class="spread-arrow">↗</span>
+              </h3>
+              <p class="spread-excerpt">
+                A bespoke luxury brand identity, custom blind debossed stationery, and art direction for a niche perfumery nestled in the Marais.
+              </p>
+              <div class="spread-micro-tags">
+                <span class="tag">Typography</span>
+                <span class="tag">Foil Stamp</span>
+                <span class="tag">Packaging</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story 02: Ceramic Botanica (Wide Landscape with Postage Stamp) -->
+          <article class="work-spread spread-wide" data-category="object" data-id="ceramic-botanica">
+            <div class="vintage-stamp" aria-hidden="true">
+              <span>AIRMAIL</span>
+              <strong>PARIS</strong>
+            </div>
+            <div class="spread-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Modern sculptural ceramic vessels and tactile terracotta" 
+                   class="spread-img">
+              <span class="spread-folio">FOLIO NO. 02 // OBJECT</span>
+            </div>
+            <div class="spread-content">
+              <div class="spread-meta-line">
+                <span class="meta-year">2025</span>
+                <span class="meta-client">Studio Terra, Kyoto</span>
+              </div>
+              <h3 class="spread-title">
+                <span>The Tactile Vessel Series</span>
+                <span class="spread-arrow">↗</span>
+              </h3>
+              <p class="spread-excerpt">
+                Limited edition sculptural ceramic vessels paired with unbleached cotton dust jackets and hand-numbered colophons.
+              </p>
+              <div class="spread-micro-tags">
+                <span class="tag">Ceramic Design</span>
+                <span class="tag">Exhibition</span>
+                <span class="tag">Booklet</span>
+              </div>
+            </div>
+            <!-- Handwritten Margin Note -->
+            <div class="handwritten-note note-in-card">
+              "hand-thrown stoneware with cherry glaze accents"
+            </div>
+          </article>
+
+          <!-- Story 03: Cahier Rouge (Editorial Book & Magazine) -->
+          <article class="work-spread spread-standard" data-category="print" data-id="cahier-rouge">
+            <div class="washi-tape tape-corner" aria-hidden="true"></div>
+            <div class="spread-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" 
+                   alt="Editorial book design with elegant typography and linen binding" 
+                   class="spread-img">
+              <span class="spread-folio">FOLIO NO. 03 // PUBLICATION</span>
+            </div>
+            <div class="spread-content">
+              <div class="spread-meta-line">
+                <span class="meta-year">2025</span>
+                <span class="meta-client">Éditions du Silence</span>
+              </div>
+              <h3 class="spread-title">
+                <span>Cahier Rouge: Monograph on Tactile Poetry</span>
+                <span class="spread-arrow">↗</span>
+              </h3>
+              <p class="spread-excerpt">
+                A 180-page hardcover monograph bound in coarse oatmeal linen featuring Japanese hand-stitched cherry red thread and silver foil.
+              </p>
+              <div class="spread-micro-tags">
+                <span class="tag">Book Design</span>
+                <span class="tag">Linen Binding</span>
+                <span class="tag">Curatorial</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story 04: Chérie Chérie (Playful Identity & Confectionery) -->
+          <article class="work-spread spread-standard" data-category="brand" data-id="cherie-cherie">
+            <div class="cherry-sticker-corner" aria-hidden="true">🍒</div>
+            <div class="spread-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" 
+                   alt="Artisan bakery and packaging with refined typography and warm colors" 
+                   class="spread-img">
+              <span class="spread-folio">FOLIO NO. 04 // IDENTITY</span>
+            </div>
+            <div class="spread-content">
+              <div class="spread-meta-line">
+                <span class="meta-year">2025</span>
+                <span class="meta-client">Chérie Patisserie, Milan</span>
+              </div>
+              <h3 class="spread-title">
+                <span>Chérie Chérie: Nostalgic Confectionery</span>
+                <span class="spread-arrow">↗</span>
+              </h3>
+              <p class="spread-excerpt">
+                Visual identity celebrating 1970s Italian cafe culture, scalloped pastry boxes, vintage matchbooks, and cherry enamel pins.
+              </p>
+              <div class="spread-micro-tags">
+                <span class="tag">Brand Identity</span>
+                <span class="tag">Illustration</span>
+                <span class="tag">Merchandise</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story 05: Ephemeral Soundscapes (Spatial Installation) -->
+          <article class="work-spread spread-wide" data-category="space" data-id="ephemeral-soundscapes">
+            <div class="washi-tape tape-top" aria-hidden="true"></div>
+            <div class="spread-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Spatial art installation with architectural lighting and shadows" 
+                   class="spread-img">
+              <span class="spread-folio">FOLIO NO. 05 // SPATIAL</span>
+            </div>
+            <div class="spread-content">
+              <div class="spread-meta-line">
+                <span class="meta-year">2024</span>
+                <span class="meta-client">Pavilion Barcelona</span>
+              </div>
+              <h3 class="spread-title">
+                <span>Chamber of Resonances</span>
+                <span class="spread-arrow">↗</span>
+              </h3>
+              <p class="spread-excerpt">
+                An architectural pavilion combining acoustic linen drapery, raw travertine plinths, and ambient quadraphonic sound.
+              </p>
+              <div class="spread-micro-tags">
+                <span class="tag">Spatial Design</span>
+                <span class="tag">Scenography</span>
+                <span class="tag">Sound</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story 06: Soliloquy (Art Photography & Still Life) -->
+          <article class="work-spread spread-tall" data-category="print" data-id="soliloquy">
+            <div class="pushpin" aria-hidden="true"></div>
+            <div class="spread-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" 
+                   alt="High fashion editorial still life with fabric drapery" 
+                   class="spread-img">
+              <span class="spread-folio">FOLIO NO. 06 // EDITORIAL</span>
+            </div>
+            <div class="spread-content">
+              <div class="spread-meta-line">
+                <span class="meta-year">2024</span>
+                <span class="meta-client">Revue Magazine</span>
+              </div>
+              <h3 class="spread-title">
+                <span>Soliloquy: Shadows on Washed Silk</span>
+                <span class="spread-arrow">↗</span>
+              </h3>
+              <p class="spread-excerpt">
+                Curated visual essay exploring the drape, weight, and movement of hand-dyed silks under late autumn Mediterranean sunlight.
+              </p>
+              <div class="spread-micro-tags">
+                <span class="tag">Art Direction</span>
+                <span class="tag">Photography</span>
+                <span class="tag">Styling</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: EPHEMERA & TACTILE MEMO PAD (SCRAPBOOK ARTIFACTS) -->
+    <section id="ephemera" class="ephemera-section">
+      <div class="editorial-container">
+        <div class="section-badge">SCRAPBOOK VAULT</div>
+        <h2 class="section-heading">Ephemera <span class="serif-italic text-cherry">&amp; Studio Memos</span></h2>
+        <p class="section-subtext">Fragments, tactile curiosities, and unedited thoughts pinned to our studio corkboard.</p>
+
+        <div class="ephemera-corkboard">
+          
+          <!-- Memo 01: Torn Paper Receipt / Creative Creed -->
+          <div class="ephemera-item torn-receipt">
+            <div class="torn-top-edge" aria-hidden="true"></div>
+            <div class="receipt-header">
+              <span class="receipt-num">RECEIPT № 8492</span>
+              <span class="receipt-date">2026.11</span>
+            </div>
+            <h4 class="receipt-title">CREATIVE TENETS</h4>
+            <ul class="receipt-list">
+              <li><span>01. Texture over gloss</span> <span class="text-cherry">✓</span></li>
+              <li><span>02. Whitespace is oxygen</span> <span class="text-cherry">✓</span></li>
+              <li><span>03. Never fear a bold serif</span> <span class="text-cherry">✓</span></li>
+              <li><span>04. Red is a punctuation mark</span> <span class="text-cherry">✓</span></li>
+              <li><span>05. Humor keeps art human</span> <span class="text-cherry">✓</span></li>
+            </ul>
+            <div class="receipt-barcode">||| || | |||| || || | |||||</div>
+          </div>
+
+          <!-- Memo 02: Swatch Palette Card -->
+          <div class="ephemera-item palette-card">
+            <div class="washi-tape tape-top" aria-hidden="true"></div>
+            <span class="swatch-card-title">STUDIO PALETTE SPECS</span>
+            <div class="swatches-row">
+              <div class="swatch-block" style="background: #F7F4EE;" title="Warm Ivory">
+                <span>Ivory</span>
+                <small>#F7F4EE</small>
+              </div>
+              <div class="swatch-block" style="background: #EDE8DF;" title="Soft Cream">
+                <span>Cream</span>
+                <small>#EDE8DF</small>
+              </div>
+              <div class="swatch-block" style="background: #DCD3C6;" title="Sand Beige">
+                <span>Sand</span>
+                <small>#DCD3C6</small>
+              </div>
+              <div class="swatch-block" style="background: #A8A29A; color: #fff;" title="Warm Grey">
+                <span>Grey</span>
+                <small>#A8A29A</small>
+              </div>
+              <div class="swatch-block" style="background: #C62838; color: #fff;" title="Signature Cherry Red">
+                <span>Cherry</span>
+                <small>#C62838</small>
+              </div>
+            </div>
+            <p class="handwritten-note swatch-note">“85% quiet warmth, 15% electric cherry.”</p>
+          </div>
+
+          <!-- Memo 03: Studio Soundscape Player (Interactive Audio Mood) -->
+          <div class="ephemera-item soundscape-card">
+            <div class="pushpin" aria-hidden="true"></div>
+            <div class="sound-badge">AUDIO MOODBOARD</div>
+            <h4 class="sound-title">Studio Reverie (Lo-Fi)</h4>
+            <p class="sound-artist">Satie Gymnopedie No. 1 + Rain in Montmartre</p>
+            
+            <div class="sound-controls">
+              <button class="sound-play-btn" id="sound-toggle" aria-label="Play or pause ambient generator">
+                <span class="play-icon" id="play-icon">▶</span>
+                <span id="sound-status-text">Listen to Ambience</span>
+              </button>
+              <div class="sound-bars" id="sound-bars" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <small class="sound-meta">Synthesized via Web Audio API</small>
+          </div>
+
+          <!-- Memo 04: Postal Card from Kyoto -->
+          <div class="ephemera-item postcard-item">
+            <div class="airmail-stripe" aria-hidden="true"></div>
+            <div class="postcard-body">
+              <div class="postcard-left">
+                <p class="handwritten-postcard">
+                  Dearest observer,<br><br>
+                  Found a tiny stationery shop tucked behind a bamboo grove. Purchased 40 meters of red silk binding ribbon. Everything feels possible today.
+                </p>
+                <div class="signature">Valérie ♡</div>
+              </div>
+              <div class="postcard-right">
+                <div class="postcard-stamp">
+                  <span>POSTAGE</span>
+                  <strong>JAPAN 84</strong>
+                </div>
+                <div class="postcard-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: THE COLOPHON (ABOUT & EDITORIAL STATEMENT) -->
+    <section id="colophon" class="colophon-section">
+      <div class="editorial-container">
+        <div class="colophon-grid">
+          
+          <!-- Left: Oval Portrait in Passe-partout Frame -->
+          <div class="colophon-portrait-col">
+            <div class="passe-partout-frame">
+              <div class="washi-tape tape-top" aria-hidden="true"></div>
+              <div class="portrait-oval-wrap">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" 
+                     alt="Portrait of creative director Valérie Vance" 
+                     class="portrait-img">
+              </div>
+              <div class="portrait-colophon-footer">
+                <span class="author-name">Valérie Vance</span>
+                <span class="author-role">Founder &amp; Creative Lead</span>
+              </div>
+            </div>
+
+            <!-- Current Obsessions List Card -->
+            <div class="obsessions-card">
+              <span class="obsessions-title">CURRENT OBSESSIONS [AUTUMN ’26]</span>
+              <ul class="obsessions-list">
+                <li><span class="bullet">✦</span> 1960s Swiss typographic manuals</li>
+                <li><span class="bullet">✦</span> Tart cherry tartlets with sea salt</li>
+                <li><span class="bullet">✦</span> Antique brass paperweights &amp; dip pens</li>
+                <li><span class="bullet">✦</span> Japanese washi papers dyed in persimmon</li>
+                <li><span class="bullet">✦</span> Analogue synthesizers recorded on cassette</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: Editorial Statement & Clients -->
+          <div class="colophon-text-col">
+            <div class="section-badge">THE COLOPHON</div>
+            <h2 class="colophon-heading">
+              Creating at the intersection of <span class="serif-italic text-cherry">curatorial discipline</span> and spontaneous joy.
+            </h2>
+
+            <div class="colophon-body-prose">
+              <p>
+                Over the past decade, I have operated as an independent creative director, visual strategist, and bookbinder between Paris, Barcelona, and Tokyo. My practice is grounded in the belief that digital artifacts should possess the same tactile resonance, surprise, and intimacy as a rare first-edition magazine.
+              </p>
+              <p>
+                Rather than adhering to sterile design conventions, every project begins with an inquiry into material culture: How does ink sink into handmade cotton paper? How does a single punctuation of cherry red awaken a field of soft cream? What happens when we allow a design to breathe?
+              </p>
+            </div>
+
+            <!-- Client & Exhibition Records (Editorial Table) -->
+            <div class="clients-folio-box">
+              <div class="box-header">
+                <span class="box-title">SELECTED COMMISSIONS &amp; PATRONS</span>
+                <span class="box-index">2018–2026</span>
+              </div>
+              <div class="clients-list">
+                <span class="client-name">Vogue Living</span>
+                <span class="client-dot">•</span>
+                <span class="client-name">Kvadrat Textiles</span>
+                <span class="client-dot">•</span>
+                <span class="client-name">Taschen Books</span>
+                <span class="client-dot">•</span>
+                <span class="client-name">Aesop</span>
+                <span class="client-dot">•</span>
+                <span class="client-name">Jacquemus</span>
+                <span class="client-dot">•</span>
+                <span class="client-name">The Barbican</span>
+                <span class="client-dot">•</span>
+                <span class="client-name">Fondation Cartier</span>
+              </div>
+            </div>
+
+            <!-- Press & Recognition Badges -->
+            <div class="recognition-row">
+              <div class="award-chip">
+                <span class="award-year">2025</span>
+                <span class="award-name">TDC Tokyo Annual Book Award</span>
+              </div>
+              <div class="award-chip">
+                <span class="award-year">2024</span>
+                <span class="award-name">D&amp;AD Yellow Pencil (Typography)</span>
+              </div>
+              <div class="award-chip">
+                <span class="award-year">2023</span>
+                <span class="award-name">It’s Nice That Feature</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: DISPATCH (CONTACT AS AIRMAIL TELEGRAM) -->
+    <section id="dispatch" class="dispatch-section">
+      <div class="editorial-container">
+        
+        <div class="telegram-envelope">
+          <div class="airmail-border-top" aria-hidden="true"></div>
+
+          <div class="telegram-content">
+            <div class="telegram-header">
+              <div class="telegram-badge">
+                <span>PRIORITY DISPATCH</span>
+                <span class="cherry-bullet">●</span>
+                <span>COMMISSION INQUIRY</span>
+              </div>
+              <div class="postmark-circle" aria-hidden="true">
+                <span>L'ATELIER</span>
+                <strong>PARIS</strong>
+                <span>2026</span>
+              </div>
+            </div>
+
+            <h2 class="dispatch-heading">
+              Have an ambitious vision, a publication, or a brand mythos to craft?
+            </h2>
+            <p class="dispatch-subtext">
+              We accept a limited selection of 4–6 client partnerships per year to ensure rigorous creative dedication and exquisite physical execution.
+            </p>
+
+            <div class="dispatch-cta-group">
+              <a href="mailto:bonjour@valerievance.studio" class="btn-cherry" id="email-link">
+                <span>bonjour@valerievance.studio</span>
+                <span class="btn-arrow">↗</span>
+              </a>
+
+              <button class="btn-copy-address" id="copy-email-btn" title="Copy email address">
+                <span id="copy-label">Copy Dispatch Address</span>
+                <span class="copy-icon">⎘</span>
+              </button>
+
+              <a href="#" class="btn-archive-download" id="dossier-download">
+                <span>Download Portfolio Dossier (PDF)</span>
+                <span class="pdf-tag">4.2MB</span>
+              </a>
+            </div>
+
+            <!-- Editorial Social Index -->
+            <div class="social-editorial-index">
+              <span class="index-label">THE CHANNELS:</span>
+              <div class="social-links-list">
+                <a href="https://are.na" target="_blank" rel="noopener noreferrer" class="social-item">
+                  <span class="num">01</span> Are.na <span class="arrow">↗</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-item">
+                  <span class="num">02</span> Instagram <span class="arrow">↗</span>
+                </a>
+                <a href="https://substack.com" target="_blank" rel="noopener noreferrer" class="social-item">
+                  <span class="num">03</span> Substack Journal <span class="arrow">↗</span>
+                </a>
+                <a href="https://pin.it" target="_blank" rel="noopener noreferrer" class="social-item">
+                  <span class="num">04</span> Pinterest Vault <span class="arrow">↗</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-item">
+                  <span class="num">05</span> LinkedIn <span class="arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="airmail-border-bottom" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="editorial-footer">
+    <div class="editorial-container footer-inner">
+      <div class="footer-left">
+        <span class="footer-masthead">L’ATELIER ROUGE</span>
+        <p class="footer-copy">
+          © 2026 Valérie Vance. An editorial playground shaped with warm neutrals, tactile love &amp; a signature cherry red accent.
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <span class="color-registration-dots" aria-hidden="true">
+          <span style="background: #F7F4EE;" title="#F7F4EE"></span>
+          <span style="background: #EDE8DF;" title="#EDE8DF"></span>
+          <span style="background: #DCD3C6;" title="#DCD3C6"></span>
+          <span style="background: #A8A29A;" title="#A8A29A"></span>
+          <span style="background: #252525;" title="#252525"></span>
+          <span style="background: #C62838;" title="#C62838 (Signature Cherry)"></span>
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <a href="#cover" class="back-to-cover-btn">
+          <span>Top of Edition</span>
+          <span class="arrow-up">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Editorial Project Quick-Look Modal -->
+  <div class="editorial-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop-layer" id="modal-backdrop"></div>
+    <div class="modal-dialog-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close project dossier">✕</button>
+      <div class="modal-scroll-body" id="modal-content-area">
+        <!-- Dynamically injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Feedback Notification -->
+  <div class="editorial-toast" id="editorial-toast" aria-live="polite">
+    <span class="toast-cherry">🍒</span>
+    <span class="toast-text" id="toast-text">Address copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
